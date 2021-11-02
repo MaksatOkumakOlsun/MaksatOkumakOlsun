@@ -1,0 +1,64 @@
+package Ejercicio_1;
+
+public class Persona {
+	
+	private String nombre;
+	private String apellido;
+	private String dni;
+	private Fecha fecha;
+	private Domicilio domicilio;
+	
+	public Persona(String nombre, String apellido, String dni, int dia, int mes, int anio, String calle, String altura, String barrio) {
+		this.setNombre(nombre);
+		this.setApellido(apellido);
+		this.setDni(dni);
+		this.setFecha(new Fecha(dia, mes, anio));
+		this.setDomicilio(new Domicilio (calle, altura, barrio));
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public Fecha getFecha() {
+		return fecha;
+	}
+
+	public Domicilio getDomicilio() {
+		return domicilio;
+	}
+
+	private void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	private void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	private void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	private void setFecha(Fecha fecha) {
+		this.fecha = fecha;
+	}
+
+	public void setDomicilio(Domicilio domicilio) {
+		this.domicilio = domicilio;
+	}
+
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + ", fecha=" + fecha
+				+ ", domicilio=" + domicilio + "]";
+	}
+	
